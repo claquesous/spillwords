@@ -1,0 +1,15 @@
+0.2	Added option to use aspell for dictionary rather than a file.
+	Edited a few files and added cygwin_moc_types.cpp for cygwin compile.
+	Wrote a little m4 script to check for neeeded cygwin load flags.
+	Made the mainForm into a global variable.
+	Having mainForm global seemed to fix bug #1014776.
+	Fix up kde-common files to work with newer autotools.
+      Dictionary is only reloaded when it is changed.
+	Fixed options dialog caption.
+	Use getenv to make sure ".spillwords" configuration file is stored in $HOME.
+      Option dialog cancel button actually works.
+
+0.1.1	Updated packaging using KDeveloper.
+	Changed image format to xpm.
+
+0.1	Initial Release

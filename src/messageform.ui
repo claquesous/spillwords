@@ -1,0 +1,117 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>messageForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>messageForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>96</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Send Message</string>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>okButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>50</y>
+                <width>50</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>messageLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>64</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Message:</string>
+        </property>
+        <property name="buddy" stdset="0">
+            <cstring>messageEdit</cstring>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>cancelButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>100</x>
+                <y>50</y>
+                <width>50</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Cancel</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>messageEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>20</y>
+                <width>125</width>
+                <height>23</height>
+            </rect>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>okButton</sender>
+        <signal>clicked()</signal>
+        <receiver>messageForm</receiver>
+        <slot>onOk()</slot>
+    </connection>
+    <connection>
+        <sender>cancelButton</sender>
+        <signal>clicked()</signal>
+        <receiver>messageForm</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>messageEdit</tabstop>
+    <tabstop>okButton</tabstop>
+    <tabstop>cancelButton</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">qstring.h</include>
+    <include location="local" impldecl="in implementation">messageform.ui.h</include>
+</includes>
+<variables>
+    <variable>QString m_message;</variable>
+</variables>
+<slots>
+    <slot>onOk()</slot>
+</slots>
+<functions>
+    <function returnType="QString">getMessage()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

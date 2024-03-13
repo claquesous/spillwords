@@ -1,0 +1,146 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>netForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>netForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>320</width>
+            <height>141</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Begin Network Game</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>serverTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>60</y>
+                <width>151</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Server Name or Address:</string>
+        </property>
+    </widget>
+    <widget class="QCheckBox">
+        <property name="name">
+            <cstring>serverCheckBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>120</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Play as Server?</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>okPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>210</x>
+                <y>20</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>cancelPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>210</x>
+                <y>70</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Cancel</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>addressLineEdit</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>80</y>
+                <width>160</width>
+                <height>23</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>localhost</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>serverCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>netForm</receiver>
+        <slot>onServerToggle(bool)</slot>
+    </connection>
+    <connection>
+        <sender>okPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>netForm</receiver>
+        <slot>onOk()</slot>
+    </connection>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>netForm</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>serverCheckBox</tabstop>
+    <tabstop>addressLineEdit</tabstop>
+    <tabstop>okPushButton</tabstop>
+    <tabstop>cancelPushButton</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">netform.ui.h</include>
+</includes>
+<variables>
+    <variable>QString m_address;</variable>
+    <variable>bool m_server;</variable>
+</variables>
+<slots>
+    <slot>onServerToggle( bool toggled )</slot>
+    <slot>onOk()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function specifier="non virtual" returnType="bool">isServer()</function>
+    <function specifier="non virtual" returnType="QString">getAddress()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

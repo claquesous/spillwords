@@ -1,0 +1,119 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>spellForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>spellForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>330</width>
+            <height>148</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Word not in Dictionary:</string>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>yesPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>100</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Yes</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>noPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>120</x>
+                <y>100</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;No</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>addPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>220</x>
+                <y>100</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Add</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>spellLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>30</y>
+                <width>64</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>textLabel1</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>addPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>spellForm</receiver>
+        <slot>onAdd()</slot>
+    </connection>
+    <connection>
+        <sender>noPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>spellForm</receiver>
+        <slot>onNo()</slot>
+    </connection>
+    <connection>
+        <sender>yesPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>spellForm</receiver>
+        <slot>onYes()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">spellform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">bool m_add;</variable>
+</variables>
+<slots>
+    <slot>onYes()</slot>
+    <slot>onNo()</slot>
+    <slot>onAdd()</slot>
+</slots>
+<functions>
+    <function>setText( QString title, QString word )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

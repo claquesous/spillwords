@@ -1,0 +1,70 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>aboutForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>aboutForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>365</width>
+            <height>129</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>About Spillwords</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel7</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>60</x>
+                <y>20</y>
+                <width>270</width>
+                <height>90</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Spillwords
+Version 0.2 Beta
+Copyright 2004
+
+Spillwords is released under the GPL license.</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>iconLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>40</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="paletteForegroundColor">
+            <color>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
+            </color>
+        </property>
+        <property name="scaledContents">
+            <bool>true</bool>
+        </property>
+    </widget>
+</widget>
+<includes>
+    <include location="local" impldecl="in implementation">aboutform.ui.h</include>
+</includes>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

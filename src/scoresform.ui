@@ -1,0 +1,183 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>scoresForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>scoresForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>263</width>
+            <height>273</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Current Scores</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel6</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>64</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Players</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel7</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>120</y>
+                <width>64</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Total:</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>totalTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>80</x>
+                <y>120</y>
+                <width>64</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>0</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>playersComboBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>40</y>
+                <width>92</width>
+                <height>27</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel8</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>20</y>
+                <width>86</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Round Scores</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>okPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>210</y>
+                <width>96</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>clearButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>210</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Clear Scores</string>
+        </property>
+    </widget>
+    <widget class="QListBox">
+        <item>
+            <property name="text">
+                <string>New Item</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>scoresListBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>130</x>
+                <y>50</y>
+                <width>100</width>
+                <height>140</height>
+            </rect>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>clearButton</sender>
+        <signal>clicked()</signal>
+        <receiver>scoresForm</receiver>
+        <slot>onClear()</slot>
+    </connection>
+    <connection>
+        <sender>okPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>scoresForm</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>playersComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>scoresForm</receiver>
+        <slot>onPlayer()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">qstring.h</include>
+    <include location="local" impldecl="in implementation">scoresform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">bool m_cleared;</variable>
+    <variable access="public">QStringList m_players;</variable>
+    <variable access="public">int m_numscores;</variable>
+    <variable access="public">QValueList&lt;int&gt; m_scores;</variable>
+</variables>
+<slots>
+    <slot>onClear()</slot>
+    <slot>onPlayer()</slot>
+    <slot>exec()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

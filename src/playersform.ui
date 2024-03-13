@@ -1,0 +1,225 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>playersForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>playersForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>402</width>
+            <height>241</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Edit Players</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel9</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>83</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Player Name:</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>addPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>60</y>
+                <width>110</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Add Player</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>removePushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>120</y>
+                <width>110</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Remove Player</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>editPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>90</y>
+                <width>110</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Edit Player</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>togglePushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>150</y>
+                <width>110</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Toggle Computer</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>okPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>180</y>
+                <width>110</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+    </widget>
+    <widget class="QCheckBox">
+        <property name="name">
+            <cstring>computerCheckBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>240</x>
+                <y>20</y>
+                <width>130</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Computer Player</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>nameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>110</x>
+                <y>20</y>
+                <width>125</width>
+                <height>23</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QListBox">
+        <item>
+            <property name="text">
+                <string>New Item</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>namesListBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>60</y>
+                <width>220</width>
+                <height>150</height>
+            </rect>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>addPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>playersForm</receiver>
+        <slot>onAdd()</slot>
+    </connection>
+    <connection>
+        <sender>editPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>playersForm</receiver>
+        <slot>onEdit()</slot>
+    </connection>
+    <connection>
+        <sender>togglePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>playersForm</receiver>
+        <slot>onToggle()</slot>
+    </connection>
+    <connection>
+        <sender>removePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>playersForm</receiver>
+        <slot>onRemove()</slot>
+    </connection>
+    <connection>
+        <sender>okPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>playersForm</receiver>
+        <slot>accept()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>nameLineEdit</tabstop>
+    <tabstop>computerCheckBox</tabstop>
+    <tabstop>addPushButton</tabstop>
+    <tabstop>editPushButton</tabstop>
+    <tabstop>removePushButton</tabstop>
+    <tabstop>togglePushButton</tabstop>
+    <tabstop>okPushButton</tabstop>
+    <tabstop>namesListBox</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">qstring.h</include>
+    <include location="local" impldecl="in declaration">qstringlist.h</include>
+    <include location="local" impldecl="in implementation">playersform.ui.h</include>
+</includes>
+<variables>
+    <variable>QStringList m_players;</variable>
+</variables>
+<slots>
+    <slot>addPlayers( QStringList players )</slot>
+    <slot>onAdd()</slot>
+    <slot>onEdit()</slot>
+    <slot>onRemove()</slot>
+    <slot>accept()</slot>
+    <slot>onToggle()</slot>
+</slots>
+<functions>
+    <function returnType="QStringList">getPlayers()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

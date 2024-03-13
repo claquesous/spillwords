@@ -1,0 +1,476 @@
+<!DOCTYPE UI><UI version="3.1.2" stdsetdef="1">
+<class>optionsForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>optionsForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>349</width>
+            <height>368</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Spillwords Options</string>
+    </property>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>10</y>
+                <width>210</width>
+                <height>80</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Artificial Intelligence</string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel5</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>49</y>
+                    <width>119</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Computer Accuracy</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>lineEdit8</cstring>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel4</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>130</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Computer Intelligence</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>lineEdit7</cstring>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>intelLineEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>150</x>
+                    <y>20</y>
+                    <width>50</width>
+                    <height>23</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>accLineEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>150</x>
+                    <y>50</y>
+                    <width>50</width>
+                    <height>23</height>
+                </rect>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>100</y>
+                <width>130</width>
+                <height>70</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Multiplayer</string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel3</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>40</y>
+                    <width>70</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>End Score:</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>lineEdit6</cstring>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>sameCheckBox</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>110</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Same Game</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>endLineEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>80</x>
+                    <y>40</y>
+                    <width>40</width>
+                    <height>23</height>
+                </rect>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>cancelPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>240</x>
+                <y>60</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Cancel</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>okPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>240</x>
+                <y>20</y>
+                <width>89</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Ok</string>
+        </property>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>buttonGroup1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>100</y>
+                <width>170</width>
+                <height>70</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Net Mode</string>
+        </property>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>simulRadioButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>40</y>
+                    <width>150</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Play Simultaneously</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>watchRadioButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>130</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Watch Opponent</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QSpinBox">
+        <property name="name">
+            <cstring>timeSpinBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>180</x>
+                <y>320</y>
+                <width>52</width>
+                <height>23</height>
+            </rect>
+        </property>
+        <property name="maxValue">
+            <number>5</number>
+        </property>
+        <property name="minValue">
+            <number>1</number>
+        </property>
+        <property name="value">
+            <number>3</number>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>100</x>
+                <y>320</y>
+                <width>64</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Time Limit:</string>
+        </property>
+        <property name="buddy" stdset="0">
+            <cstring>spinBox1</cstring>
+        </property>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>buttonGroup2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>180</y>
+                <width>310</width>
+                <height>120</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Dictionary Type:</string>
+        </property>
+        <widget class="QToolButton">
+            <property name="name">
+                <cstring>mainToolButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>230</x>
+                    <y>40</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>...</string>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>fileRadioButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>50</x>
+                    <y>20</y>
+                    <width>130</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Dictionary File:</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>mainLineEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>50</x>
+                    <y>40</y>
+                    <width>170</width>
+                    <height>20</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>aspellLineEdit</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>200</x>
+                    <y>80</y>
+                    <width>50</width>
+                    <height>23</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>en_US</string>
+            </property>
+            <property name="maxLength">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>aspellRadioButton</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>50</x>
+                    <y>80</y>
+                    <width>130</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Aspell Dictionary:</string>
+            </property>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>mainToolButton</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onMain()</slot>
+    </connection>
+    <connection>
+        <sender>okPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onOk()</slot>
+    </connection>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>sameCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onSame()</slot>
+    </connection>
+    <connection>
+        <sender>simulRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onSimul()</slot>
+    </connection>
+    <connection>
+        <sender>watchRadioButton</sender>
+        <signal>pressed()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onWatch()</slot>
+    </connection>
+    <connection>
+        <sender>aspellRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onAspell()</slot>
+    </connection>
+    <connection>
+        <sender>fileRadioButton</sender>
+        <signal>clicked()</signal>
+        <receiver>optionsForm</receiver>
+        <slot>onFile()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">optionsform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">int m_time;</variable>
+    <variable access="public">int m_aiacc;</variable>
+    <variable access="public">QString m_strMain;</variable>
+    <variable access="public">QString m_aspell;</variable>
+    <variable access="public">QString m_computer;</variable>
+    <variable access="public">bool m_nosame;</variable>
+    <variable access="public">bool m_net;</variable>
+    <variable access="public">int m_ai;</variable>
+    <variable access="public">int m_endscore;</variable>
+    <variable access="public">int m_simul;</variable>
+    <variable access="public">int m_watch;</variable>
+    <variable access="public">bool m_same;</variable>
+    <variable access="public">int m_dictmode;</variable>
+</variables>
+<slots>
+    <slot>exec()</slot>
+    <slot>onMain()</slot>
+    <slot>onOk()</slot>
+    <slot>onSimul()</slot>
+    <slot>onWatch()</slot>
+    <slot>onSame()</slot>
+    <slot>onAspell()</slot>
+    <slot>onFile()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

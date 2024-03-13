@@ -1,0 +1,531 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>mainForm</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>mainForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>522</width>
+            <height>375</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>522</width>
+            <height>375</height>
+        </size>
+    </property>
+    <property name="paletteBackgroundColor">
+        <color>
+            <red>234</red>
+            <green>187</green>
+            <blue>120</blue>
+        </color>
+    </property>
+    <property name="caption">
+        <string>Spillwords</string>
+    </property>
+    <property name="rightJustification">
+        <bool>false</bool>
+    </property>
+    <hbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="spacing">
+            <number>0</number>
+        </property>
+        <widget class="QWidgetStack">
+            <property name="name">
+                <cstring>widgetStack</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>500</width>
+                    <height>300</height>
+                </size>
+            </property>
+            <property name="backgroundOrigin">
+                <enum>WindowOrigin</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Plain</enum>
+            </property>
+            <property name="lineWidth">
+                <number>0</number>
+            </property>
+            <property name="margin">
+                <number>0</number>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>blankPage</cstring>
+                </property>
+                <attribute name="id">
+                    <number>0</number>
+                </attribute>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>qt_dead_widget_blankPage</cstring>
+                </property>
+                <attribute name="id">
+                    <number>1</number>
+                </attribute>
+            </widget>
+        </widget>
+    </hbox>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>menubar</cstring>
+    </property>
+    <property name="lineWidth">
+        <number>2</number>
+    </property>
+    <item text="&amp;Game" name="gameMenu">
+        <action name="tournamentAction"/>
+        <action name="namesAction"/>
+        <action name="scoresAction"/>
+        <separator/>
+        <action name="optionsAction"/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="&amp;Round" name="roundMenu">
+        <action name="spillAction"/>
+        <action name="endAction"/>
+        <separator/>
+        <action name="bestAction"/>
+    </item>
+    <item text="&amp;View" name="viewMenu">
+        <action name="timerViewAction"/>
+        <action name="statusViewAction"/>
+    </item>
+    <item text="&amp;Network" name="networkMenu">
+        <action name="netAction"/>
+        <action name="disconnectAction"/>
+        <separator/>
+        <action name="messageAction"/>
+    </item>
+    <item text="&amp;Help" name="helpMenu">
+        <action name="helpContentsAction"/>
+        <action name="helpIndexAction"/>
+        <separator/>
+        <action name="checkAction"/>
+        <separator/>
+        <action name="helpAboutAction"/>
+    </item>
+</menubar>
+<toolbars>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="accel">
+            <string>Alt+F4</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpContentsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Contents</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Contents...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpIndexAction</cstring>
+        </property>
+        <property name="text">
+            <string>Index</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Index...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutAction</cstring>
+        </property>
+        <property name="text">
+            <string>About</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;About</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>spillAction</cstring>
+        </property>
+        <property name="text">
+            <string>Spill</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Spill</string>
+        </property>
+        <property name="accel">
+            <string>F2</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>messageAction</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Send Message</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+M</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>netAction</cstring>
+        </property>
+        <property name="text">
+            <string>Start Net Game</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+N</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>disconnectAction</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Disconnect</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+D</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>endAction</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>End</string>
+        </property>
+        <property name="accel">
+            <string>F3</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>tournamentAction</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>Tournament Mode</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Tournament Mode</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+T</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>bestAction</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>&amp;Best</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+B</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>namesAction</cstring>
+        </property>
+        <property name="text">
+            <string>Enter Names</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+E</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>scoresAction</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>View Scores</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+V</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>optionsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Options</string>
+        </property>
+        <property name="menuText">
+            <string>O&amp;ptions</string>
+        </property>
+        <property name="accel">
+            <string>F5</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>statusViewAction</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="on">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>Status Bar</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>timerViewAction</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="on">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>Timer</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>checkAction</cstring>
+        </property>
+        <property name="text">
+            <string>Spell Check</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+C</string>
+        </property>
+    </action>
+</actions>
+<connections>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>helpIndexAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>helpIndex()</slot>
+    </connection>
+    <connection>
+        <sender>helpContentsAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>helpContents()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>helpAbout()</slot>
+    </connection>
+    <connection>
+        <sender>spillAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onSpill()</slot>
+    </connection>
+    <connection>
+        <sender>messageAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onMessage()</slot>
+    </connection>
+    <connection>
+        <sender>netAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onNet()</slot>
+    </connection>
+    <connection>
+        <sender>endAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onEnd()</slot>
+    </connection>
+    <connection>
+        <sender>bestAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onBest()</slot>
+    </connection>
+    <connection>
+        <sender>optionsAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onOptions()</slot>
+    </connection>
+    <connection>
+        <sender>disconnectAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onDisconnect()</slot>
+    </connection>
+    <connection>
+        <sender>scoresAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onScores()</slot>
+    </connection>
+    <connection>
+        <sender>namesAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onNames()</slot>
+    </connection>
+    <connection>
+        <sender>timerViewAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onViewTimer()</slot>
+    </connection>
+    <connection>
+        <sender>statusViewAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onViewStatus()</slot>
+    </connection>
+    <connection>
+        <sender>tournamentAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onTournament()</slot>
+    </connection>
+    <connection>
+        <sender>checkAction</sender>
+        <signal>activated()</signal>
+        <receiver>mainForm</receiver>
+        <slot>onCheck()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">messageform.h</include>
+    <include location="local" impldecl="in declaration">qdatetime.h</include>
+    <include location="local" impldecl="in declaration">netform.h</include>
+    <include location="local" impldecl="in declaration">SpillConfig.h</include>
+    <include location="local" impldecl="in declaration">qstatusbar.h</include>
+    <include location="local" impldecl="in implementation">mainform.ui.h</include>
+</includes>
+<forwards>
+    <forward>class SpillBoard;</forward>
+</forwards>
+<variables>
+    <variable access="private">int m_netscore;</variable>
+    <variable access="private">bool m_clientfinished;</variable>
+    <variable access="private">int game_timer;</variable>
+    <variable>SpillBoard *m_netGame;</variable>
+    <variable>SpillConfig m_doc;</variable>
+    <variable>SpillBoard *m_game;</variable>
+    <variable access="private">bool m_playing;</variable>
+    <variable access="private">bool m_tournament;</variable>
+    <variable access="private">bool m_netgame;</variable>
+    <variable access="private">bool m_server;</variable>
+    <variable>QTime m_time;</variable>
+    <variable>SpillBoard *m_games;</variable>
+    <variable>int m_viewing;</variable>
+    <variable access="private">int m_playernum;</variable>
+    <variable>QWidget *timerWidget;</variable>
+</variables>
+<slots>
+    <slot>fileExit()</slot>
+    <slot>helpIndex()</slot>
+    <slot>helpContents()</slot>
+    <slot>helpAbout()</slot>
+    <slot>onSpill()</slot>
+    <slot>onBest()</slot>
+    <slot>onTournament()</slot>
+    <slot>onEnd()</slot>
+    <slot>onMessage()</slot>
+    <slot>onNet()</slot>
+    <slot>onDisconnect()</slot>
+    <slot>onOptions()</slot>
+    <slot>onNames()</slot>
+    <slot>onScores()</slot>
+    <slot>onViewTimer()</slot>
+    <slot>onViewStatus()</slot>
+    <slot>gotNetScore( int netscore )</slot>
+    <slot>netFinish()</slot>
+    <slot>onCheck()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function>timerText( QString time )</function>
+    <function returnType="bool">event( QEvent * e )</function>
+    <function>closeEvent( QCloseEvent * )</function>
+    <function>timerEvent( QTimerEvent * e )</function>
+    <function>serverConnected()</function>
+    <function>clientConnected( char mode )</function>
+    <function>receivedFaces()</function>
+    <function>lostConnection()</function>
+    <function>netQNoU()</function>
+    <function>setNetPlayer( QString player )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
